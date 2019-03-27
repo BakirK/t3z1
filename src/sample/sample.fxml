@@ -22,7 +22,7 @@
    </rowConstraints>
    <children>
       <Button fx:id="dugme" mnemonicParsing="false" onAction="#Ispisi" text="Ispiši brojeve" GridPane.columnIndex="2" />
-      <ListView fx:id="lista" prefHeight="104.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <ListView fx:id="lista" prefHeight="249.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <GridPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </GridPane.margin>

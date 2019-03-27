@@ -18,6 +18,7 @@ public class Controller {
 
 
     public void initialize() {
+        digit.setPromptText("Unesite broj");
         digit.getStyleClass().add("poljeNijeIspravno");
         digit.textProperty().addListener(new ChangeListener<String>() {
             @Override
@@ -65,14 +66,17 @@ public class Controller {
     }
 
     public void Ispisi(ActionEvent actionEvent) {
+        lista.getItems().clear();
         String n = digit.getText();
-
-
-        for(int i = 1; i <= Integer.parseInt(n); i++){
-            if(i % sumacifara(i)==0){
-                lista.getItems().add(i);
+        if (!n.isEmpty()) {
+            for(int i = 1; i <= Integer.parseInt(n); i++){
+                if(i % sumacifara(i)==0){
+                    lista.getItems().add(i);
+                }
             }
         }
-
+        else {
+            digit.setPromptText("Niste unijeli broj");
+        }
     }
 }
