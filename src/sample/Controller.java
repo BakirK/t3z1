@@ -24,6 +24,7 @@ public class Controller {
             public void changed(ObservableValue<? extends String> observableValue, String o, String n) {
                 if (n.isEmpty()) {
                     digit.getStyleClass().add("poljeNijeIspravno");
+                    digit.setPromptText("Unesite broj");
                 } else {
                     digit.getStyleClass().removeAll("poljeNijeIspravno");
                 }
