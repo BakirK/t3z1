@@ -21,6 +21,7 @@ public class Controller {
         digit.getStyleClass().add("poljeNijeIspravno");
         digit.textProperty().addListener(new ChangeListener<String>() {
             @Override
+
             public void changed(ObservableValue<? extends String> observableValue, String o, String n) {
                 if (n.isEmpty()) {
                     digit.getStyleClass().add("poljeNijeIspravno");
@@ -28,7 +29,17 @@ public class Controller {
                 } else {
                     digit.getStyleClass().removeAll("poljeNijeIspravno");
                 }
+                if (!n.matches("\\d*")) {
+                    digit.setText(n.replaceAll("[^\\d]", ""));
+                }
             }
+
+
+
+
+
+
+
         });
     }
 
