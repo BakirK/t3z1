@@ -5,26 +5,27 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 
 import java.awt.*;
 
 public class Controller {
 
 
-    public javafx.scene.control.TextArea cifra;
     public javafx.scene.control.Button dugme;
     public ListView lista;
+    public TextField digit;
 
 
     public void initialize() {
-        cifra.getStyleClass().add("poljeNijeIspravno");
-        cifra.textProperty().addListener(new ChangeListener<String>() {
+        digit.getStyleClass().add("poljeNijeIspravno");
+        digit.textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observableValue, String o, String n) {
                 if (n.isEmpty()) {
-                    cifra.getStyleClass().add("poljeNijeIspravno");
+                    digit.getStyleClass().add("poljeNijeIspravno");
                 } else {
-                    cifra.getStyleClass().removeAll("poljeNijeIspravno");
+                    digit.getStyleClass().removeAll("poljeNijeIspravno");
                 }
             }
         });
@@ -52,7 +53,7 @@ public class Controller {
     }
 
     public void Ispisi(ActionEvent actionEvent) {
-        String n = cifra.getText();
+        String n = digit.getText();
 
 
         for(int i = 1; i <= Integer.parseInt(n); i++){
