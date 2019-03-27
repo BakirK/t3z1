@@ -1,0 +1,7 @@
+#dugme {
+   -fx-background-color: lightskyblue;
+}
+
+.poljeNijeIspravno {
+   -fx-background-color: red;
+}
